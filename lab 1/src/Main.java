@@ -4,10 +4,10 @@ public class Main {
         boolean flag;
         flag = ZadOne.arrayHalfChecker(testArray);
         System.out.println(flag);
-        int[] anotherTestArray = {1,2,5,3}; //Array for testing arrayChecker method
+        /* int[] anotherTestArray = {1,2,5,3}; //Array for testing arrayChecker method
         flag = ZadOne.arrayChecker(anotherTestArray);
         System.out.println(flag);
-        ZadOne.fizzBuzzPrinter();
+        ZadOne.fizzBuzzPrinter();*/
     }
 }
 

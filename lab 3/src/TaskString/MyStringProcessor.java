@@ -24,7 +24,7 @@ public class MyStringProcessor {
 
     public static int maxLengthOfSameSymbols(String text) {
         char myCharArray[] = text.toCharArray();
-        int max = 0, i = 0, counter = 0;
+        int max = 0, counter = 0;
         char c = myCharArray[0];
         for (char s : myCharArray) {
             if (s == c) {
@@ -37,7 +37,7 @@ public class MyStringProcessor {
                 c = s;
             }
         }
-        return max;
+        return max+1;
     }
 
     public static void wordsInString(String text) {

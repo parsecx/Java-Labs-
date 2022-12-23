@@ -13,7 +13,7 @@ public class NewBill extends Bill {
         itemsBill = new ArrayList<NewItem>();
     }
 
-    public NewBill(ArrayList items) {
+    public NewBill(ArrayList<NewItem> items) {
         super(items);
     }
 
@@ -33,5 +33,12 @@ public class NewBill extends Bill {
         }
         String result = "Your total sum is:";
         return result.concat(Double.toString(sum - discount));
+    }
+    public String printDiscount() {
+        double discount = 0.0;
+        for(NewItem i: itemsBill) {
+            discount += i.discount;
+        }
+        return "Total discount is " + Double.toString(discount);
     }
 }

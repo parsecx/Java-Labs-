@@ -25,23 +25,26 @@ public class MyOwnAutoShop implements Admin, Customer {
     }
 
     @Override
-    public Integer[] getCarsPrice() {
-        ArrayList<Integer> resultArray = new ArrayList<Integer>();
+    public String getCarsPrice() {
+        StringBuilder endResult = new StringBuilder();
+        int iterator = 0;
         for(Car c : listOfCars) {
-            resultArray.add((int)c.getSalePrice());
+            endResult.append(c.getSalePrice());
+            endResult.append(" ");
         }
-        Integer[] endResult = (Integer[]) resultArray.toArray();
-        return endResult;
+        return endResult.toString();
     }
 
     @Override
-    public String[] getCarColors() {
-        ArrayList<String> resultArray = new ArrayList<String>();
+    public String getCarColors() {
+        StringBuilder endResult = new StringBuilder();
+        int iterator = 0;
         for(Car c : listOfCars) {
-            resultArray.add(c.color);
+            endResult.append(c.color);
+            endResult.append(" ");
+            iterator++;
         }
-        String[] endResult = (String[]) resultArray.toArray();
-        return endResult;
+        return endResult.toString();
     }
 
     @Override
